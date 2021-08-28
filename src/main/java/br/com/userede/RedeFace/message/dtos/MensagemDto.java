@@ -1,4 +1,4 @@
-package br.com.userede.RedeFace.mensagem.dtos;
+package br.com.userede.RedeFace.message.dtos;
 
 public class MensagemDto {
 

@@ -1,14 +1,13 @@
-package br.com.userede.RedeFace.mensagem;
+package br.com.userede.RedeFace.message;
 
 
 import br.com.userede.RedeFace.user.Usuario;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 
 @Entity
 @Table (name = "mensagens")
-public class Message {
+public class Mensagem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -23,7 +22,7 @@ public class Message {
     @JoinColumn(name = "usuario_destino", nullable = false)
     private Usuario destino;
 
-    public Message() {
+    public Mensagem() {
     }
 
     public Integer getId() {

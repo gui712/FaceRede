@@ -1,6 +1,6 @@
 package br.com.userede.RedeFace.user;
 
-import br.com.userede.RedeFace.mensagem.Message;
+import br.com.userede.RedeFace.message.Mensagem;
 
 import javax.persistence.*;
 import java.util.List;
@@ -17,7 +17,7 @@ public class Usuario {
     @Column(nullable = false, length = 50)
     private String cargo;
     @OneToMany(mappedBy = "origem")
-    private List<Message> messages;
+    private List<Mensagem> mensagems;
 
     public Usuario() {
     }
@@ -54,11 +54,11 @@ public class Usuario {
         this.cargo = cargo;
     }
 
-    public List<Message> getMessages() {
-        return messages;
+    public List<Mensagem> getMessages() {
+        return mensagems;
     }
 
-    public void setMessages(List<Message> messages) {
-        this.messages = messages;
+    public void setMessages(List<Mensagem> mensagems) {
+        this.mensagems = mensagems;
     }
 }
