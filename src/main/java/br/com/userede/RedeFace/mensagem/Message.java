@@ -5,18 +5,21 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table (name = "chat")
+@Table (name = "mensagens")
 public class Message {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Column(nullable = false)
     private String message;
+    @Column(nullable = true)
+    private Boolean visualizado;
     @ManyToOne
-    @JoinColumn(name = "destino", nullable = false)
-    private Usuario usuario;
-    private LocalDate dataDeEnvio;
-    private boolean visualizado;
+    @JoinColumn(name = "usuario_origem", nullable = false)
+    private Usuario origem;
+    @ManyToOne
+    @JoinColumn(name = "usuario_destino", nullable = false)
+    private Usuario destino;
 
     public Message() {
     }
@@ -37,27 +40,28 @@ public class Message {
         this.message = message;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
-    public LocalDate getDataDeEnvio() {
-        return dataDeEnvio;
-    }
-
-    public void setDataDeEnvio(LocalDate dataDeEnvio) {
-        this.dataDeEnvio = dataDeEnvio;
-    }
-
-    public boolean isVisualizado() {
+    public Boolean getVisualizado() {
         return visualizado;
     }
 
-    public void setVisualizado(boolean visualizado) {
+    public void setVisualizado(Boolean visualizado) {
         this.visualizado = visualizado;
     }
+
+    public Usuario getOrigem() {
+        return origem;
+    }
+
+    public void setOrigem(Usuario origem) {
+        this.origem = origem;
+    }
+
+    public Usuario getDestino() {
+        return destino;
+    }
+
+    public void setDestino(Usuario destino) {
+        this.destino = destino;
+    }
 }
+
