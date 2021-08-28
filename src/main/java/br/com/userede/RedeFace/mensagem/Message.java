@@ -1,6 +1,8 @@
 package br.com.userede.RedeFace.mensagem;
 
 
+import br.com.userede.RedeFace.user.Usuario;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
