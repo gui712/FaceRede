@@ -12,14 +12,14 @@ public class Mensagem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column(nullable = false)
-    private String message;
+    private String mensagem;
     @Column(nullable = true)
     private Boolean visualizado;
     @ManyToOne
-    @JoinColumn(name = "usuario_origem", nullable = false)
+    @JoinColumn(name = "usuario_origem_email", nullable = false)
     private Usuario origem;
     @ManyToOne
-    @JoinColumn(name = "usuario_destino", nullable = false)
+    @JoinColumn(name = "usuario_destino_email", nullable = false)
     private Usuario destino;
 
     public Mensagem() {
@@ -33,12 +33,12 @@ public class Mensagem {
         this.id = id;
     }
 
-    public String getMessage() {
-        return message;
+    public String getMensagem() {
+        return mensagem;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setMensagem(String mensagem) {
+        this.mensagem = mensagem;
     }
 
     public Boolean getVisualizado() {

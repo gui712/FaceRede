@@ -15,8 +15,8 @@ public class MensagemController {
     private MensagemService mensagemService;
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void enviarMensagem(@RequestBody @Valid CadastroMensagemDto mensagemDto) throws NotFoundException {
-        mensagemService.EnviarMensagem(mensagemDto.getOrigem(), mensagemDto.getDestino(), mensagemDto.getMensagem());
+    public void enviarMensagem(@RequestBody @Valid CadastroMensagemDto mensagemDto) {
+        mensagemService.EnvioMensagem(mensagemDto.getOrigem(), mensagemDto.getDestino(), mensagemDto.getMensagem());
     }
 
     @GetMapping("/{idMensagem}")

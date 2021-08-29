@@ -26,6 +26,13 @@ public class Usuario {
         return nome;
     }
 
+    public Usuario(String nome, String sobrenome, String email, String cargo) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.email = email;
+        this.cargo = cargo;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }

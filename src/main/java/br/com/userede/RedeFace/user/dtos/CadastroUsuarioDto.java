@@ -1,17 +1,18 @@
 package br.com.userede.RedeFace.user.dtos;
 
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 public class CadastroUsuarioDto {
 
-    @Size(min = 3, message = "{validacao.usuario.nome}")
+    @Size(min = 2,max = 50, message = "{validacao.usuario.nome}")
     private String nome;
-    @Size(min = 3, message = "{validacao.usuario.sobrenome}")
+    @Size(min = 3,max = 50, message = "{validacao.usuario.sobrenome}")
     private String sobrenome;
     @Email(message = "{validacao.usuario.email}")
     private String email;
-    @Size(min = 5, message = "{validacao.usuario.cargo}")
+    @NotBlank(message = "{validacao.usuario.cargo}")
     private String cargo;
 
     public CadastroUsuarioDto() {

@@ -1,10 +1,11 @@
-package br.com.userede.RedeFace.user.dtos;
+package br.com.userede.RedeFace.user;
 
 import br.com.userede.RedeFace.message.Mensagem;
 import br.com.userede.RedeFace.message.dtos.MensagemDto;
 import br.com.userede.RedeFace.message.dtos.MensagemNaoVisualizadaDto;
 import br.com.userede.RedeFace.user.Usuario;
 import br.com.userede.RedeFace.user.UsuarioService;
+import br.com.userede.RedeFace.user.dtos.CadastroUsuarioDto;
 import org.dom4j.rule.Mode;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

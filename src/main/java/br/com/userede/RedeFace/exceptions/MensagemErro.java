@@ -3,6 +3,7 @@ package br.com.userede.RedeFace.exceptions;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class MensagemErro {
     private int statusCode;
     private List<Erro> erros = new ArrayList<>();
@@ -28,3 +29,4 @@ public class MensagemErro {
         this.erros = erros;
     }
 }
+
