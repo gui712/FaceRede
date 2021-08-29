@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/chat")
 public class MensagemController {
@@ -13,7 +15,7 @@ public class MensagemController {
     private MensagemService mensagemService;
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void enviarMensagem(@RequestBody CadastroMensagemDto mensagemDto) throws NotFoundException {
+    public void enviarMensagem(@RequestBody @Valid CadastroMensagemDto mensagemDto) throws NotFoundException {
         mensagemService.EnviarMensagem(mensagemDto.getOrigem(), mensagemDto.getDestino(), mensagemDto.getMensagem());
     }
 
