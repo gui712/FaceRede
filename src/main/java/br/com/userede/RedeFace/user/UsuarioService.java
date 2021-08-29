@@ -26,7 +26,8 @@ public class UsuarioService {
         throw new RuntimeException("Usuario não cadastrado !");
     }
     public List<Mensagem> pesquisarPorMensagensNãoVisualizadas(String email){
-
+        return usuarioRepository.mostrarMensagemNãoVisualizada(email);
     }
+
 
 }
