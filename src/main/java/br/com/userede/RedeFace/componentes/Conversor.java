@@ -1,4 +1,4 @@
-package br.com.userede.RedeFace.message.componentes;
+package br.com.userede.RedeFace.componentes;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
