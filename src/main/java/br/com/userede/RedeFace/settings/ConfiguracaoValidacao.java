@@ -1,4 +1,4 @@
-package br.com.userede.RedeFace.configuracao;
+package br.com.userede.RedeFace.settings;
 
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
